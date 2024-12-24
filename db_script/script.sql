@@ -12,8 +12,8 @@ INSERT INTO `admin`(`username`, `password`)
 VALUES ('nona', 'sha256$ULUS96W3djTrRi7e$233ff68eb2b2c3593440e1d6c0dabaaea17a9f246328db4ab1f09d05f5929568');
 
 CREATE TABLE `course`(
-code VARCHAR(10) NOT NULL,
-name VARCHAR(50) NOT NULL,
+code VARCHAR(20) NOT NULL,
+name VARCHAR(100) NOT NULL,
 college VARCHAR(45) NOT NULL,
 PRIMARY KEY(code)
 );
@@ -31,7 +31,7 @@ middlename VARCHAR(20) NOT NULL,
 lastname VARCHAR(20) NOT NULL,
 year INT(1) NOT NULL,
 gender VARCHAR(10) NOT NULL,
-coursecode VARCHAR(10) NOT NULL,
+coursecode VARCHAR(20) NOT NULL,
 collegecode VARCHAR(10),
 photo VARCHAR(500),
 PRIMARY KEY(id),
@@ -43,13 +43,14 @@ INSERT INTO `college`(`code`, `name`)
 VALUES ('CCS', 'College of Computer Studies'),
 	   ('CSM', 'College of Science and Mathematics'),
        ('CASS', 'College of Arts and Social Sciences'),
-       ('COET', 'College of Engineering and Technology'),
+       ('COE', 'College of Engineering'),
        ('CED', 'College of Education'),
-       ('CON', 'College of Nursing');
+       ('CHS', 'College of Health Sciences');
 
 INSERT INTO `course`(`code`, `name`, `college`)
 VALUES ('BSCS', 'Bachelor of Science in Computer Science', 'CCS'),
 	   ('BSIT', 'Bachelor of Science in Information Technology', 'CCS'),
        ('BSIS', 'Bachelor of Science in Information System', 'CCS'),
-       ('BSCE', 'Bachelor of Science in Civil Engineering', 'COET'),
-       ('BSChemEng', 'Bachelor of Science in Chemical Engineering', 'CCS');
+       ('BSCE', 'Bachelor of Science in Civil Engineering', 'COE'),
+       ('BSChemEng', 'Bachelor of Science in Chemical Engineering', 'COE');
+       
