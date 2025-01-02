@@ -16,7 +16,7 @@
               <div class="modal-body">
                   <form class="needs-validation" action="{{ url_for('student.add') }}" method="post" enctype="multipart/form-data">
 
-                      <div class="image-container flex-column">
+                      <div class="image-container flex-column" data-ignore-validation>
                           <div class="image-wrapper ">
                               <div class="image">
                                   <img id="add-selected-image" src="../static/images/student-profile-template.png" alt="">
@@ -24,7 +24,7 @@
                               <div id="file-name" hidden></div>
                           </div>
                           <div>
-                            <input type="file" class="form-control" accept="image/png, image/jpeg" id="add-image-inp" value="" name="selected-image" required hidden>
+                            <input type="file" class="form-control" accept="image/png, image/jpeg" id="add-image-inp" value="" name="selected-image" hidden>
                             <button onclick="addImage()" id="custom-btn" type="button">CHOOSE PHOTO</button>
                           </div>
                       </div>
@@ -40,11 +40,11 @@
                           <input type="studentinfo" class="form-control" id="firstname" name="firstname" required>
                           <div class="invalid-feedback">Please enter First Name</div>
                       </div>
-                      <!-- <div class="mb-3">
+                      <div class="mb-3">
                           <label for="middlename" class="form-label">Middle Name</label>
                           <input type="studentinfo" class="form-control" id="middlename" name="middlename">
                           <small id="middlenameHelp" class="form-text text-muted">Leave it blank if not applicable</small>
-                      </div> -->
+                      </div>
                       <div class="mb-3">
                           <label for="lastname" class="form-label" required>Last Name</label>
                           <input type="studentinfo" class="form-control" id="lastname" name="lastname">

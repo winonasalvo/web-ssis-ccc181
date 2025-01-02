@@ -119,7 +119,10 @@ def add() -> str:
     if request.method == 'POST':
         image = request.files['selected-image']
         try:
-            cloud_link = save_image(image)
+            if image.filename.lower().endswith(('.png', '.jpeg', '.jpg')):
+                cloud_link = save_image(image)
+            else:
+                cloud_link = "No image"
         except Exception as e:
             print("Can't save image")
             print(e)

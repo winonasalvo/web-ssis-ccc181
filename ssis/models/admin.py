@@ -21,10 +21,15 @@ class Admin():
         #     WHERE username = '{self.username}';
         # '''
         # cursor.execute(query)
+        # print("registered _user: " + self.username, self.password)
         # try:
         #     username, password = cursor.fetchone()
+        #     print("registered _user tryp: " + password)
+        #     print("passwordDB: " + password, "passwordAdmin: " + self.password)
+        #     if password == self.password: ## Improve pass auth using check_password_hash(password, self.password):
+        #         print("pass, true")
+        #         return True
         # except TypeError:
         #     return None
-        # if check_password_hash(password, self.password):
-        #     return True
+
 

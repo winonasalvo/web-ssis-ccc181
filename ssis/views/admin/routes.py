@@ -13,6 +13,7 @@ def verify() -> str:
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
+        print("login:" + username, password)
         if admin_found(username, password):
             return redirect(url_for('student.students'))
     return redirect(url_for('admin.login'))

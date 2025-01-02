@@ -13,7 +13,7 @@ current_page = 1
 def colleges() -> str:
     students = Student().get_all(paginate=False)
     courses = Course().get_all(paginate=False)
-    colleges = College().get_all(current_page, 5)
+    colleges = College().get_all(current_page, 50)
     departments = College().get_departments()
     colleges_count = len(colleges)
     return render_template('/college/colleges.html', 
